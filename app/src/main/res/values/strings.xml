@@ -11,4 +11,5 @@
     <string name="get_started">GET STARTED</string>
     <string name="finish">FINISH</string>
     <string name="please_select_league">Please select a league</string>
+    <string name="looking_for_a_x_near_you">Looking for a %1$s %2$s league near you…</string>
 </resources>

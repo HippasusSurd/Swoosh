@@ -1,9 +1,12 @@
-package com.example.joelcollins.swoosh
+package com.example.joelcollins.swoosh.Controller
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import com.example.joelcollins.swoosh.Util.EXTRA_LEAGUE
+import com.example.joelcollins.swoosh.Util.League
+import com.example.joelcollins.swoosh.R
 import kotlinx.android.synthetic.main.activity_league.*
 
 

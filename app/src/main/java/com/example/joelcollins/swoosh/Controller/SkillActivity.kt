@@ -1,7 +1,15 @@
-package com.example.joelcollins.swoosh
+package com.example.joelcollins.swoosh.Controller
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
+import com.example.joelcollins.swoosh.Util.EXTRA_LEAGUE
+import com.example.joelcollins.swoosh.Util.League
+import com.example.joelcollins.swoosh.R
+import com.example.joelcollins.swoosh.Util.EXTRA_SKILL
+import com.example.joelcollins.swoosh.Util.SkillLevel
 import kotlinx.android.synthetic.main.activity_skill.*
 
 class SkillActivity : AppCompatActivity() {
@@ -32,5 +40,17 @@ class SkillActivity : AppCompatActivity() {
                 selectedSkill = SkillLevel.None
             }
         }
+    }
+
+    fun onBtnFinishClicked(view: View) {
+        if (selectedSkill == SkillLevel.None) {
+            Toast.makeText(this, "Please select your skill level", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val gotoFinalActivity = Intent(this, FinalActivity::class.java)
+        gotoFinalActivity.putExtra(EXTRA_LEAGUE, selectedLeague)
+        gotoFinalActivity.putExtra(EXTRA_SKILL, selectedSkill)
+        startActivity(gotoFinalActivity)
     }
 }
